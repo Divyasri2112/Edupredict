@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduPredict - Opportunities</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+body { margin:0; font-family:'Poppins', sans-serif; scroll-behavior: smooth; background:#f8f9fa; color:#343a40; }
+nav { position:fixed; width:100%; background:#17a2b8; padding:10px 0; top:0; z-index:100; text-align:center; }
+nav a { color:white; text-decoration:none; margin:0 15px; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
+#welcome { display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; background:linear-gradient(135deg,#f8f9fa,#e9ecef); text-align:center; }
+#welcome h1 { font-size:3rem; margin:20px 0; color:#343a40; }
+#welcome .btn { text-decoration:none; color:white; background:#343a40; padding:12px 25px; border-radius:50px; font-size:1.2rem; transition:all 0.3s ease; }
+#welcome .btn:hover { transform:scale(1.1); background:#495057; }
+
+/* About Section */
+#about { background: linear-gradient(135deg, #e0f7fa, #f8f9fa); padding:100px 20px; text-align:center; }
+#about h1 { font-size:2.5rem; margin-bottom:20px; color:#17a2b8; }
+#about p { font-size:1.1rem; line-height:1.8; max-width:900px; margin:0 auto 40px auto; color:#343a40; }
+.about-points { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+.point { background:white; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:25px; width:280px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.point:hover { transform:translateY(-10px); box-shadow:0 8px 16px rgba(0,0,0,0.2); }
+.point i { font-size:40px; color:#17a2b8; margin-bottom:10px; }
+.point h3 { font-size:1.4rem; margin-bottom:10px; color:#343a40; }
+
+/* Opportunities Section */
+#opportunities { padding:120px 20px 40px 20px; background:#f1f3f5; }
+.container { width:90%; max-width:1000px; margin:0 auto; }
+#opportunities h1 { text-align:center; margin-bottom:40px; font-size:2.5rem; }
+.exam-category { margin-bottom:50px; }
+.exam-category h2 { font-size:1.8rem; border-bottom:3px solid #343a40; padding-bottom:5px; margin-bottom:20px; }
+.opportunities-cards { display:flex; flex-wrap:wrap; gap:20px; }
+.opportunity-card { perspective:1000px; flex:1 1 calc(33% - 20px); min-width:250px; }
+.opportunity-card-inner { position:relative; width:100%; height:220px; text-align:center; transition: transform 0.8s; transform-style:preserve-3d; border-radius:10px; }
+.opportunity-card:hover .opportunity-card-inner { transform: rotateY(180deg); }
+.opportunity-card-front,.opportunity-card-back { position:absolute; width:100%; height:100%; backface-visibility:hidden; border-radius:10px; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:15px; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
+.opportunity-card-front { background:white; }
+.opportunity-card-front i { font-size:40px; margin-bottom:10px; color:#17a2b8; }
+.opportunity-card-back { background:#17a2b8; color:white; transform:rotateY(180deg); }
+.opportunity-card a { color:white; text-decoration:none; background:#343a40; padding:8px 12px; border-radius:5px; margin-top:10px; transition:all 0.3s ease; }
+.opportunity-card a:hover { background:#495057; }
+
+@media(max-width:768px){
+  .opportunity-card, .point, .team-member { flex:1 1 100%; width:90%; }
+  .about-points, .team-cards { flex-direction:column; align-items:center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#welcome">Home</a>
+  <a href="#about">About</a>
+  <a href="#opportunities">Opportunities</a>
+</nav>
+
+<!-- Welcome Section -->
+<section id="welcome">
+  <div id="lottie-welcome" style="width:250px;height:250px;"></div>
+  <h1>Hello, Welcome to EduPredict!</h1>
+  <a href="#about" class="btn">Learn More</a>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <h1>About EduPredict</h1>
+    <p>
+      EduPredict is your one-step platform for discovering the best academic and career opportunities after every stage of education — from 10th to post-graduation.  
+      We aim to simplify your journey by providing verified exam information, smart guidance, and helpful resources — all in one place.
+    </p>
+    <div class="about-points">
+      <div class="point">
+        <i class="fas fa-bullseye"></i>
+        <h3>Our Mission</h3>
+        <p>Empower students with clear, reliable, and updated educational pathways for a brighter future.</p>
+      </div>
+      <div class="point">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Why EduPredict?</h3>
+        <p>We bring all exams, courses, and career options together, making it easier for students to choose confidently.</p>
+      </div>
+      <div class="point">
+        <i class="fas fa-rocket"></i>
+        <h3>Our Vision</h3>
+        <p>Guide every learner toward the right opportunities using AI, data, and technology-driven insights.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Opportunities Section -->
+<section id="opportunities">
+  <div class="container">
+    <h1>Explore Opportunities</h1>
+    <!-- Add all your exam opportunity cards here exactly like your previous code -->
+    <!-- Example for After 10th -->
+    <div class="exam-category">
+      <h2>After 10th</h2>
+      <div class="opportunities-cards">
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-graduation-cap"></i><h3>Polytechnic / Diploma</h3><p>Technical Courses</p></div><div class="opportunity-card-back"><p>Apply for Polytechnic / Diploma courses</p><a href="https://www.diksha.gov.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-lightbulb"></i><h3>NTSE</h3><p>Talent Search Exam</p></div><div class="opportunity-card-back"><p>National Talent Search Exam Registration</p><a href="https://www.ncert.nic.in/programmes/ntse.aspx" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-flask"></i><h3>Olympiads</h3><p>Science / Math / Computer</p></div><div class="opportunity-card-back"><p>Participate in Olympiads</p><a href="https://www.olympiadsuccess.com/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-tools"></i><h3>ITI Courses</h3><p>Industrial Training</p></div><div class="opportunity-card-back"><p>Apply for ITI Courses</p><a href="https://www.itiindia.gov.in/" target="_blank">Register</a></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Intermediate MPC -->
+    <div class="exam-category">
+      <h2>Intermediate - MPC</h2>
+      <div class="opportunities-cards">
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-calculator"></i><h3>JEE Main</h3><p>Engineering Entrance</p></div><div class="opportunity-card-back"><p>National Engineering Exam</p><a href="https://jeemain.nta.nic.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-university"></i><h3>JEE Advanced</h3><p>Top Engineering Colleges</p></div><div class="opportunity-card-back"><p>Advanced Engineering Exam</p><a href="https://jeeadv.ac.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-school"></i><h3>EAMCET</h3><p>State Engineering Exam</p></div><div class="opportunity-card-back"><p>Apply for EAMCET</p><a href="https://sche.ap.gov.in/" target="_blank">Register</a></div></div></div>
+      </div>
+    </div>
+
+    <!-- Intermediate BIPC -->
+    <div class="exam-category">
+      <h2>Intermediate - BIPC</h2>
+      <div class="opportunities-cards">
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-stethoscope"></i><h3>NEET</h3><p>Medical Entrance</p></div><div class="opportunity-card-back"><p>National Medical Entrance Exam</p><a href="https://neet.nta.nic.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-hospital"></i><h3>EAMCET Medical</h3><p>State Medical Exam</p></div><div class="opportunity-card-back"><p>Apply for EAMCET Medical</p><a href="https://sche.ap.gov.in/" target="_blank">Register</a></div></div></div>
+      </div>
+    </div>
+
+    <!-- Intermediate CEC -->
+    <div class="exam-category">
+      <h2>Intermediate - CEC</h2>
+      <div class="opportunities-cards">
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-calculator"></i><h3>CA Foundation</h3><p>Commerce Entrance</p></div><div class="opportunity-card-back"><p>Chartered Accountancy Entry Exam</p><a href="https://www.icai.org/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-university"></i><h3>CUET</h3><p>University Entrance</p></div><div class="opportunity-card-back"><p>CUET Exam Registration</p><a href="https://cuet.samarth.ac.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-lightbulb"></i><h3>Commerce Olympiads</h3><p>Commerce / Economics Olympiads</p></div><div class="opportunity-card-back"><p>Participate in Commerce Olympiads</p><a href="https://www.olympiadsuccess.com/" target="_blank">Register</a></div></div></div>
+      </div>
+    </div>
+
+    <!-- Intermediate MEC -->
+    <div class="exam-category">
+      <h2>Intermediate - MEC</h2>
+      <div class="opportunities-cards">
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-university"></i><h3>ICET</h3><p>MBA/MCA Entrance</p></div><div class="opportunity-card-back"><p>Apply for ICET</p><a href="https://sche.ap.gov.in/icet/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-building-columns"></i><h3>Banking & SSC</h3><p>Govt Job Exams</p></div><div class="opportunity-card-back"><p>Apply for SSC / Banking</p><a href="https://ssc.nic.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-briefcase"></i><h3>Competitive Commerce Exams</h3><p>Finance / Business</p></div><div class="opportunity-card-back"><p>Apply for Commerce Exams</p><a href="https://www.careerindia.com/" target="_blank">Register</a></div></div></div>
+      </div>
+    </div>
+
+    <!-- Graduation -->
+    <div class="exam-category">
+      <h2>Graduation</h2>
+      <div class="opportunities-cards">
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-laptop-code"></i><h3>GATE</h3><p>Postgraduate Engineering</p></div><div class="opportunity-card-back"><p>GATE Exam Registration</p><a href="https://gate.iitb.ac.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-briefcase"></i><h3>CAT</h3><p>MBA Entrance Exam</p></div><div class="opportunity-card-back"><p>CAT Registration</p><a href="https://iimcat.ac.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-chalkboard-user"></i><h3>UPSC / IES</h3><p>Competitive Govt Exams</p></div><div class="opportunity-card-back"><p>Apply for UPSC / IES</p><a href="https://www.upsc.gov.in/" target="_blank">Register</a></div></div></div>
+      </div>
+    </div>
+
+    <!-- Post Graduation -->
+    <div class="exam-category">
+      <h2>Post Graduation</h2>
+      <div class="opportunities-cards">
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-chalkboard-teacher"></i><h3>NET</h3><p>University Lecturer / Research</p></div><div class="opportunity-card-back"><p>Apply for NET Exam</p><a href="https://www.ugcnet.nta.nic.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-graduation-cap"></i><h3>MBA / PG Courses</h3><p>Management / Specialization</p></div><div class="opportunity-card-back"><p>Apply for PG Courses</p><a href="https://www.cuet.samarth.ac.in/" target="_blank">Register</a></div></div></div>
+        <div class="opportunity-card"><div class="opportunity-card-inner"><div class="opportunity-card-front"><i class="fas fa-robot"></i><h3>AI / ML Certifications</h3><p>Professional Courses</p></div><div class="opportunity-card-back"><p>Apply for AI / ML</p><a href="https://www.coursera.org/" target="_blank">Register</a></div></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+var animation = lottie.loadAnimation({
+  container: document.getElementById('lottie-welcome'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json'
+});
+</script>
+</body>
+</html>
